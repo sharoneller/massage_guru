@@ -3,13 +3,7 @@ class SymptomsController < ApplicationController
 		@recommendation = Recommendation.find(params[:recommendation_id])
 		@symptoms = @recommendation.symptoms
     end
-
-    #def get_recommendation
-    #	@recommendation = Recommendation.find(params[:symptom_id])
-    #	redirect_to recommendation_path(@recommendation),
-    #	notice: "Here is your recommendation"
-    #end
-
+    # great comment
     def  new
     	@recommendation = Recommendation.find(params[:recommendation_id])
     	@symptom = @recommendation.symptoms.new
