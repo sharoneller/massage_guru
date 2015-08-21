@@ -1,0 +1,12 @@
+<%= form_for(@symptom) do |f| %>
+
+
+  <p>
+    <%= f.label :name %><br/>
+    <%= f.select :name, Symptom::name, prompt: "Choose one" %>
+  </p>
+
+ 
+
+
+<% end %>

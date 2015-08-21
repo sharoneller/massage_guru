@@ -1,0 +1,27 @@
+
+<h1>Welcome!</h1>
+
+<h2>Wondering what type of massage you need?</h2> 
+<h3>Let us bestow some massage wisdom upon you.</h3>
+
+<h3> But first we need you to tell us what symptoms you are experiencing. </h3>
+
+<h4> There are currently <%=  pluralize(@recommendations.size, 'Recommendation') %></h4>
+
+<ul>
+  <% @recommendations.each do |recommendation| %>
+	<li>
+		<strong><%= link_to recommendation.modality, recommendation %></strong> for <%= recommendation.duration %> on 
+		a <%= recommendation.frequency %> basis.
+
+		<h4> Description:</h4> <%= truncate(recommendation.description, length: 40, separator: ' ') %>
+		<h4>Pressure:</h4>
+			<p>
+				<%= recommendation.pressure %>
+			</>	
+
+	</li>
+  <% end %>
+</ul>
+<%= link_to("Add New Recommendation", new_recommendation_path) %>
+

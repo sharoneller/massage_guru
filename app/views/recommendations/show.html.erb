@@ -1,0 +1,29 @@
+<article>
+  <header>
+    <h1><%= @recommendation.modality %></h1>
+  </header>
+  <h3>Description</h3>
+  <p>
+    <%= @recommendation.description %>
+  </p>
+  <h3>Pressure</h3>
+  <p>
+    <%= @recommendation.pressure %>
+  </p>
+  <h3>Duration</h3>
+  <p>
+    <%= @recommendation.duration %>
+  </p>
+  <h3>Frequency</h3>
+  <p>
+    <%= @recommendation.frequency %>
+  </p>
+  
+</article>
+<nav>
+
+  <%= link_to "All Recommendations", recommendations_path %> |
+  <%= link_to "Edit Recommendation", edit_recommendation_path(@recommendation) %> |
+  <%= link_to pluralize(@recommendation.symptoms.size, "Symptom"), recommendation_symptoms_path(@recommendation) %> |
+  <%= link_to "Delete", recommendation_path(@recommendation), method: :delete, data: { confirm: 'Are you sure?' } %>
+</nav>

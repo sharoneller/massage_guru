@@ -1,0 +1,11 @@
+<header id="content-header">
+  <h1>Symptoms Relieved by <%= link_to(@recommendation.modality, @recommendation) %></h1>
+</header>
+<ul>
+  <% @symptoms.each do |symptom| %>
+	<li>
+		<strong><%= symptom.name %> with a severity of <%= symptom.severity %> (1 - 10 scale)</strong>
+			
+	</li>
+  <% end %>
+</ul>

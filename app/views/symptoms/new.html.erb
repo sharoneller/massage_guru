@@ -1,0 +1,21 @@
+
+
+<header id="content-header">
+  <h1>New Symptom for <%= link_to(@recommendation.modality, @recommendation) %></h1>
+</header>
+
+<%= form_for([@recommendation, @symptom]) do |f| %>
+  <p>
+    <%= f.label :name %><br/>
+    <%= f.text_field :name, size: 40, autofocus: true %>
+  </p>
+
+  <p>
+    <%= f.label :severity %><br/>
+    <%= f.text_field :severity, size: 40, autofocus: true %>
+  </p>
+  <p>
+    <%= f.submit 'Add New Symptom' %>
+    <%= link_to "Cancel", @movie, class: 'button' %>
+  </p>
+<% end %>

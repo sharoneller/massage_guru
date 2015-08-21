@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  modality: MyText
+  duration: MyText
+  frequency: MyText
+
+two:
+  modality: MyText
+  duration: MyText
+  frequency: MyText

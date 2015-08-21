@@ -1,0 +1,36 @@
+<%= form_for(@recommendation) do |f| %>
+  <p>
+    <%= f.label :modality %><br/>
+    <%= f.text_field :modality, autofocus: true %>
+  </p>
+
+  <p>
+    <%= f.label :description %><br/>
+    <%= f.text_area :description, cols: 40, rows: 7 %>
+  </p>
+
+  <p>
+    <%= f.label :pressure%><br/>
+    <%= f.text_field :pressure, size: 6 %>
+  </p>
+
+  <p>
+    <%= f.label :duration %><br/>
+    <%= f.text_area :duration, size: 12 %>
+  </p>
+
+  <p>
+    <%= f.label :frequency %><br/>
+    <%= f.select :frequency, size: 15%>
+  </p>
+
+  <p>
+    <%= f.submit %>
+    <%= link_to "Cancel", recommendations_path %>
+  </p>
+
+<% end %>
+
+
+
+

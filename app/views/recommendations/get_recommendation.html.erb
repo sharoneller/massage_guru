@@ -1,0 +1,16 @@
+<%= form_for(@recommendation) do |f| %>
+  <p>
+    <%= f.label "Choose Symptom" %><br/>
+    <%= f.select ( :name, @symptom, :id :name) %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+    <%= link_to "Cancel", recommendations_path %>
+  </p>
+
+<% end %>
+
+
+
+
