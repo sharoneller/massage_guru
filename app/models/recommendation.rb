@@ -3,7 +3,7 @@ class Recommendation < ActiveRecord::Base
 
 	validates :modality, presence: true
 
-	duration = %w(30 minutes 60 minutes 90 minutes)
+	duration = %w("30 minutes" "60 minutes" "90 minutes")
 
 	validates :duration, inclusion: { in: duration }
 
