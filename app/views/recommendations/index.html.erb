@@ -6,22 +6,14 @@
 
 <h3> But first we need you to tell us what symptoms you are experiencing. </h3>
 
-<h4> There are currently <%=  pluralize(@recommendations.size, 'Recommendation') %></h4>
+<p>
 
-<ul>
-  <% @recommendations.each do |recommendation| %>
-	<li>
-		<strong><%= link_to recommendation.modality, recommendation %></strong> for <%= recommendation.duration %> on 
-		a <%= recommendation.frequency %> basis.
+  <%= form_tag(recommendations_show_recommendation_path, method: "get", action: "show_recommendation") do %>
+  <%= select_tag "symptom", options_from_collection_for_select(@symptoms, "id", "name") %> 
+  <%= submit_tag("Get Recommendation") %>
+<% end %>
+	
+</p>
 
-		<h4> Description:</h4> <%= truncate(recommendation.description, length: 40, separator: ' ') %>
-		<h4>Pressure:</h4>
-			<p>
-				<%= recommendation.pressure %>
-			</>	
-
-	</li>
-  <% end %>
-</ul>
 <%= link_to("Add New Recommendation", new_recommendation_path) %>
 

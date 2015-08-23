@@ -1,9 +1,16 @@
 class RecommendationsController < ApplicationController
 	def index
-		@recommendations = Recommendation.all
+		@symptoms = Symptom.all
 	end
 	def show
 		@recommendation = Recommendation.find(params[:id])
+	end
+
+	def show_recommendation
+		@symptom = Symptom.find(params[:symptom])
+		@recs = Recommendation.all
+		@recommendations = @recs.select{|a| a.symptoms.include?(@symptom)}
+
 	end
 
 	def edit
@@ -32,9 +39,6 @@ class RecommendationsController < ApplicationController
 		redirect_to recommendations_url
 	end
 
-	#def get_recommendation
-	#	@symptoms = Symptom.all
-	#end
 
 	private
 
