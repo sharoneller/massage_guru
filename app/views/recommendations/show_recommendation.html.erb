@@ -1,4 +1,4 @@
-<h1>Here is your recommendation!</h1>
+<h2>Here is your massage wisdom from the Massage Guru!</h2>
 
 
 <h4><%=  pluralize(@recommendations.size, 'Recommendation') %></h4>
@@ -11,10 +11,15 @@
 
 		<h4> Description:</h4> <%= truncate(recommendation.description, length: 40, separator: ' ') %>
 		<h4>Pressure:</h4>
-			<p>
-				<%= recommendation.pressure %>
-			</>	
-
+			
+			<%= recommendation.pressure %>
+			<h4>
+				Now, go in peace to your local <%= link_to "massage therapist", 'http://sharonellerlmt.com' %>.
+			</h4>
+				
+			
+			
+			
 	</li>
   <% end %>
 </ul>

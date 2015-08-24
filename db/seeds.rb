@@ -13,7 +13,7 @@ Recommendation.create!([
 ])
 Symptom.create!([
   {name: "Neck Pain", severity: 5, recommendation_id: 1},
-  {name: "Upper back pain", severity: 7, recommendation_id: 1},
+  {name: "Neck and Shoulder Tension", severity: 7, recommendation_id: 1},
   {name: "Lower Back Pain(due to pregnancy)", severity: 5, recommendation_id: 11},
   {name: "Upper Back Pain(due to pregnancy)", severity: 5, recommendation_id: 11},
   {name: "Upper Back Pain", severity: 10, recommendation_id: 2},
