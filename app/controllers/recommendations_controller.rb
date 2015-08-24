@@ -10,7 +10,9 @@ class RecommendationsController < ApplicationController
 		@symptom = Symptom.find(params[:symptom])
 		@recs = Recommendation.all
 		@recommendations = @recs.select{|a| a.symptoms.include?(@symptom)}
-
+	end
+	def show_all_recommendations
+		@recommendations = Recommendation.all
 	end
 
 	def edit

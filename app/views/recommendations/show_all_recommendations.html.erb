@@ -1,0 +1,13 @@
+<h1>All Recommendations</h1>
+
+<ul>
+  <% @recommendations.each do |recommendation| %>
+   <li>
+   	  <strong><%= link_to(recommendation.modality, recommendation_path(recommendation)) %></strong> for
+   	  <%= recommendation.duration %> on a 
+   	  <%= recommendation.frequency %> basis
+
+   </li>
+  <% end %>
+</ul>
+

@@ -13,5 +13,24 @@ Recommendation.create!([
 ])
 Symptom.create!([
   {name: "Neck Pain", severity: 5, recommendation_id: 1},
-  {name: "Upper back pain", severity: 7, recommendation_id: 1}
+  {name: "Upper back pain", severity: 7, recommendation_id: 1},
+  {name: "Lower Back Pain(due to pregnancy)", severity: 5, recommendation_id: 11},
+  {name: "Upper Back Pain(due to pregnancy)", severity: 5, recommendation_id: 11},
+  {name: "Upper Back Pain", severity: 10, recommendation_id: 2},
+  {name: "Shoulder Pain", severity: 10, recommendation_id: 2},
+  {name: "General Muscular Pain", severity: 10, recommendation_id: 3},
+  {name: "Depression", severity: 5, recommendation_id: 4},
+  {name: "Migraine Headaches", severity: 10, recommendation_id: 4},
+  {name: "Frozen Shoulder", severity: 5, recommendation_id: 5},
+  {name: "Whiplash", severity: 5, recommendation_id: 5},
+  {name: "Mental Fatigue", severity: 5, recommendation_id: 6},
+  {name: "Tension Headaches", severity: 5, recommendation_id: 6},
+  {name: "TMJ", severity: 10, recommendation_id: 7},
+  {name: "Chronic Neck and Back Pain", severity: 10, recommendation_id: 7},
+  {name: "Chronic Fatigue Syndrome", severity: 10, recommendation_id: 8},
+  {name: "Chronic Sinusitis", severity: 10, recommendation_id: 8},
+  {name: "Digestive Disorders", severity: 10, recommendation_id: 9},
+  {name: "Insomnia", severity: 10, recommendation_id: 9},
+  {name: "Acute Pain", severity: 10, recommendation_id: 10},
+  {name: "Insomnia", severity: 10, recommendation_id: 10}
 ])
