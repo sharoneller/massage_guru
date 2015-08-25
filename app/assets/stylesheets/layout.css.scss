@@ -14,8 +14,15 @@ header#page-header {
 
 aside#sidebar {
   float: right;
-  background: $secondary-color;
-  width: 200px;
+  //background: $secondary-color;
+  width: 300px;
+
+  ul {
+    list-style: none;
+    li {
+    margin-top: 20px;
+    }
+  }
 }
 
 footer#page-footer {

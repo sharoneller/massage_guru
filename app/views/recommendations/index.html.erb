@@ -10,7 +10,7 @@
 	Please choose one symptom:
   <%= form_tag(recommendations_show_recommendation_path, method: "get", action: "show_recommendation") do %>
   <%= select_tag "symptom", options_from_collection_for_select(@symptoms, "id", "name") %> 
-  <%= submit_tag("Get Recommendation") %>
+  <%= submit_tag("Get Recommendation", :class => "my-btn my-btn-primary") %>
 <% end %>
 	
 </p>
