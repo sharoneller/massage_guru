@@ -4,6 +4,9 @@ div {
     margin-bottom: 20px;
 }
 
+h1, h2, h3, h4, h5, li, p {
+  font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
 
 /* Mixins */
 @mixin btn-theme($btn-color) {
